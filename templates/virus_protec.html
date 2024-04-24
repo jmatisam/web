@@ -57,7 +57,7 @@
 
   <main id="main">
     <!-- ======= intro Section ======= -->
-    <section id="about" class="about"></section>
+    <section id="about" class="about"><!-- No cierro la sección para que haga el efecto de que al ir pasando esta en azul como si lo hubieras leido ya a manera de chek -->
         <div class="blog-article">
             <div class="p-4 p-md-3 mb-2 rounded text-body-emphasis bg-body-secondary">
               <img src="../image/virus_protec/virus_protec.png" class="img-fluid" alt="blurred_faces"> 
@@ -70,7 +70,7 @@
 
         <article class="blog-post">
           
-            <h2 class="display-5 link-body-emphasis mb-1">virus_protec</h2>
+            <h2 class="display-5 link-body-emphasis mb-1">Virus Protec</h2>
             <p class="blog-post-meta">21 Abril, 2024 by <a href="#">jmat</a></p>
             <p>
               En un mundo donde la presencia en línea es indispensable, la seguridad web se convierte en una prioridad absoluta. Con la proliferación de amenazas como virus, 
@@ -88,7 +88,7 @@
                 <li>Debe proporcionar un resumen claro y comprensible de los resultados, para que los pudiera interpretar cualquier usuario.</li>
               </ol>
               <p>Este fue el resultado:</p> 
-            
+           <!-- ======= Resume Section ======= --> 
             <section id="resume" class="resume">
               
               <div class="p-4 p-md-3 mb-2 rounded text-body-emphasis bg-body-secondary" >
@@ -96,22 +96,75 @@
                 </div> 
                 <hr>
 
-            <p>El priimer paso no presentaba dificultas pero si lo fue tratar con la APP de Virus Total <a href="https://www.virustotal.com/gui/home/upload" target="_blank">puedes accedera ella haciendo clic aquí</a>.</p>
-            <p>A continuación, continuar articulo......</p>
-            <section id="resume" class="resume">
-            <p>Este fue el resultado:</p>  
+            <p>El primer paso no presentaba dificultas pero si lo fue tratar con la APP de Virus Total <a href="https://www.virustotal.com/gui/home/upload" target="_blank">puedes accedera ella 
+              haciendo clic aquí</a>.</p>
+
+            <p>Durante el desarrollo de la aplicación, uno de los principales desafíos que enfrenté fue la obtención del análisis de VirusTotal a través de su API. A pesar de contar con una 
+              función diseñada para obtener esta información, enfrenté dificultades para interpretar correctamente los datos devueltos por la API. En lugar de proporcionar el análisis detallado 
+              que esperaba, VirusTotal me proporcionaba un diccionario con información general para acceder a la URL con el resultado del analisis.</p>
+              
+            <p>Este el resultado que muestra Virus total con el analisis de la URL introducida:</p> 
+
             <div class="p-4 p-md-3 mb-2 rounded text-body-emphasis bg-body-secondary" >
-                <img src="../image/virus_protec/app_virus_protec.png" class="img-fluid" alt="blurred_faces" style="padding-left: center">
+              <img src="../image/virus_protec/resultado_analis.png" class="img-fluid" alt="blurred_faces" style="padding-left: center">
+            </div> 
+            <hr>
+
+            <p>Una vez que logré entender la estructura de los datos devueltos por la API de VirusTotal, me encontré con el problema de cómo procesar estos datos para obtener las estadísticas
+               específicas de análisis que necesitaba la aplicación. Ya no me valía la lógica que había implementado inicialmente y tuve que replantear cómo extraer la información de la 
+               página web. Si bien la función que diseñé estaba destinada a extraer estas estadísticas del diccionario de la respuesta JSON, requirió un proceso de depuración y ajuste constante 
+               del código para garantizar que la aplicación pudiera pasar correctamente la información recibida a ChatGPT.</p>
+
+            <p> La solución era sencilla, ya que la URL para ver los resultados tenía varias pestañas, con diferentes tipos de información, lo que yo necesitaba estaba en la 1ª pestaña que salía
+              por defecto. Solo había que extraer la información de esa pestaña mediante scraping ;). Por ello, obtenía de la URL solo la parte de la pestaña que necesitaba y se la volvía a pasar a 
+              VirusTotal.</p>
+
+            <div class="row">
+              <div class="col-lg-8">
+                <img src="../image/virus_protec/analis.png" class="img-fluid" alt="blurred_faces">
+              </div>
+              <div class="col-lg-4 pt-4 pt-lg-0 content">
+                <p class="fst-italic">
+                  <hr>
+                  Resultado final, en json, para pasar a ChatGPT.
+                  <hr>
+                </p>
+              </div>
+              <div class="col-lg-12">
+                <p>
+                  <b>Explicación de la solución mediante el código de la imagen:</b>
+                </p>
+                  <ul>
+                    <li>Define una función llamada obtener_informacion_virustotal(url, api_key) que toma una URL y una clave de API como parámetros.</li>
+                    <li>Extrae el ID de la URL proporcionada.</li>
+                    <li>Construye una nueva URL que apunta al endpoint de la API de VirusTotal para obtener información sobre URLs.</li>
+                    <li>Realiza una solicitud GET a esta URL, incluyendo las cabeceras adecuadas con la clave de API proporcionada.</li>
+                    <li>Si la solicitud es exitosa, procesa la respuesta en formato JSON para extraer estadísticas de análisis sobre la URL.</li>
+                    <li>Si hay algún error durante este proceso o si la solicitud HTTP genera una excepción (como errores 404 o 500), imprime un mensaje de error indicando que hubo un problema al obtener datos de VirusTotal.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <section id="contact" class="contact">
+            <h4><b><u></u>Pero vayamos al grano: ¿Qué paso al final?</u></b></h4>
+             <p>A pesar de los desafíos encontrados durante el desarrollo, la experiencia me brindó una valiosa oportunidad para mejorar mis habilidades en el manejo de API y el procesamiento de datos
+            en formato JSON. A través de la resolución de problemas y la experimentación con diferentes enfoques, logré superar los obstáculos y obtener una comprensión más sólida de cómo 
+            interactuar con servicios externos para enriquecer el funcionamiento de la aplicación. Esta experiencia destacó la importancia de la adaptabilidad y la perseverancia en el proceso de 
+            desarrollo de software, demostrando que cada desafío presenta una oportunidad para aprender y crecer como desarrollador.</p>
+
+            <section id="resume" class="resume">
+            <p>Este fue el resultado que al final de le muestra al usuario:</p>  
+            <div class="p-4 p-md-3 mb-2 rounded text-body-emphasis bg-body-secondary" >
+                <img src="../image/virus_protec/Muestra_al_user.png" class="img-fluid" alt="blurred_faces" style="padding-left: center">
               </div> 
               <hr>
               
-              <section id="contact" class="contact">
-              <p>mas info aqui</p>
-            <p>Y aqui</p><br>
+              
+                <p>Un saludo y hasta la próxima.</p><br>
 
                 <nav class="blog-pagination" aria-label="Pagination">
                   <a class="btn btn-outline-secondary rounded-pill" href="../templates/pront_ing.html" >Prev</a>
-                  <a class="btn btn-outline-secondary rounded-pill" href="../templates/contacto.html">Next</a>
+                  <a class="btn btn-outline-secondary rounded-pill" href="../templates/1_vision.html">Next</a>
                 </nav>
                 <hr>
         </articule> 
@@ -182,6 +235,7 @@
 
 <!-- Template Main JS File -->
 <script src="../js/app.js"></script>
+<script src="../js/paginas.js"></script>
 
 
 

@@ -39,7 +39,7 @@ h6 {
 body {
   font-family: "Open Sans", sans-serif;
   color: #292827;
-  margin-left: 0.3px;
+  margin-left: 7px;
 }
 
 }
@@ -326,7 +326,7 @@ body {
 
 
 section {
-  padding: 2px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 
@@ -863,11 +863,11 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  padding-bottom: 130px;
+  padding-bottom: 30px;
 }
 
 .contact .info {
-  padding: 30px;
+  padding: 7px;
   background: #fff;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);

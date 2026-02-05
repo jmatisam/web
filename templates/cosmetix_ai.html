@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetix AI | En Construcción</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Logo / Título con gradiente */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: -webkit-linear-gradient(45deg, #CF4E63, #9C27B0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Animación de carga (AI Brain pulse) */
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .ai-pulse {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(207, 78, 99, 0.1);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ai-pulse::before,
+        .ai-pulse::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: #CF4E63;
+            opacity: 0.6;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .ai-pulse::after {
+            animation-delay: 1s;
+        }
+
+        @keyframes pulse {
+            0% {
+                width: 10px;
+                height: 10px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 80px;
+                height: 80px;
+                opacity: 0;
+            }
+        }
+
+        /* Estilos de los Botones de Navegación */
+        .blog-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            /* Espacio entre botones */
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            /* Bordes redondos tipo pastilla */
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        /* Estilo Outline (Borde gris/color suave) */
+        .btn-outline-secondary {
+            color: #555;
+            border-color: #ccc;
+            background-color: transparent;
+        }
+
+        .btn-outline-secondary:hover {
+            color: #fff;
+            background-color: #CF4E63;
+            /* Color corporativo al pasar el ratón */
+            border-color: #CF4E63;
+            transform: translateY(-2px);
+            /* Pequeña elevación */
+            box-shadow: 0 4px 10px rgba(207, 78, 99, 0.2);
+        }
+
+        /* Footer pequeño */
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .blog-pagination {
+                gap: 10px;
+            }
+
+            .btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Animación Central -->
+        <div class="loader-container">
+            <div class="ai-pulse"></div>
+        </div>
+
+        <!-- Textos -->
+        <h1>Cosmetix AI</h1>
+        <h2>Artículo en Construcción</h2>
+        <p>Estamos entrenando nuestros algoritmos para revolucionar el mundo de la cosmética. <br>Vuelve pronto para
+            descubrir el futuro.</p>
+
+        <!-- Navegación (Botones) -->
+        <nav class="blog-pagination" aria-label="Pagination">
+            <a class="btn btn-outline-secondary" href="../templates/donbosco_airlines.html ">← Anterior</a>
+            <a class="btn btn-outline-secondary" href="../templates/virus_protec.html">Siguiente →</a>
+        </nav>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 jmat - Cosmetix AI. Todos los derechos reservados.
+        </div>
+    </div>
+
+</body>
+
+</html>

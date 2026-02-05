@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>DonBosco Airlines - jmatPortfolio</title>
+    <meta content="Arquitectura distribuida en Java con Docker y Observabilidad" name="description">
+    <meta content="Java, Docker, Grafana, Prometheus, SQL" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../image/funko.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/boxicons/css/boxicons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../css/style2.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <header id="header">
+        <div class="d-flex flex-column">
+            <div class="profile">
+                <img src="../image/funko.png" alt="" class="img-fluid rounded-circle">
+                <h3 class="text-light"><a href="../index.html">José Manuel Alonso Tirado</a></h3>
+                <div class="social-links mt-3 text-center">
+                    <a href="https://github.com/jmatisam" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="https://jmatisam.github.io/web/" class="cloud"><i class="bx bx-cloud"></i></a>
+                    <a href="https://www.linkedin.com/in/josé-manuel-alonso-tirado" class="linkedin"><i
+                            class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="../index.html" class="nav-link scrollto"><i class="bx bx-home"></i>
+                            <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Introito</span></a>
+                    </li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+                            <span>Arquitectura</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                            <span>DevOps</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ======= Introito Section ======= -->
+        <section id="about" class="about">
+            <div class="blog-article">
+                <div class="p-4 p-md-3 mb-2 rounded text-body-emphasis bg-body-secondary text-center">
+                    <img src="../image/D_B_airlines/banner_DBA.png" class="img-fluid rounded shadow"
+                        alt="Despliegue Docker">
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <article class="blog-post">
+                        <h2 class="display-5 link-body-emphasis mb-1">DonBosco Airlines: Más allá del Código, Despliegue
+                            y Observabilidad.</h2>
+                        <p class="blog-post-meta">05 Febrero, 2026 by <a href="#">jmat</a></p>
+
+                        <p>
+                            En el ecosistema tecnológico actual, que una solución sea <b>funcional</b> es solo el punto
+                            de partida.
+                            El verdadero desafío de ingeniería reside en garantizar la <b>resiliencia, portabilidad y
+                                observabilidad</b>
+                            del sistema en entornos productivos. <b>DonBosco Airlines</b> representa la evolución hacia
+                            este paradigma:
+                            un salto desde el desarrollo de aplicaciones aisladas hacia la <b>arquitectura de sistemas
+                                distribuidos</b>,
+                            donde cada componente está diseñado para ser <b>escalable y monitorizable en tiempo
+                                real</b>.
+                        </p>
+                        <div class="p-2 bg-light border rounded shadow-sm">
+                            <img src="../image/D_B_airlines/ciclo_desarrollo.jpg" class="img-fluid rounded"
+                                alt="Ciclo de Desarrollo">
+                        </div>
+                        <hr>
+                        <!-- ======= Arquitectura Section ======= -->
+                        <section id="resume" class="resume">
+                            <h4 class="mb-4"><b>La Arquitectura: Separación de Responsabilidades</b></h4>
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 text-center">
+                                    <img src="../image/D_B_airlines/docker_mini.png" class="img-fluid mb-3"
+                                        alt="Docker Logo" style="max-height: 150px;">
+                                </div>
+                                <div class="col-lg-8 pt-4 pt-lg-0 content">
+                                    <p>
+                                        El ecosistema se divide en dos grandes pilares: un <b>Backend (DonboscoApp)</b>
+                                        desarrollado en Java que centraliza la lógica de negocio y un <b>Frontend
+                                            Desktop</b> que consume estos servicios. Esta separación permite que la base
+                                        de datos MySQL esté protegida y que las transacciones sean consistentes,
+                                        siguiendo un patrón de diseño cliente-servidor robusto.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN MEJORADA CON IMÁGENES A LA IZQUIERDA -->
+                            <div class="row mt-4 align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="p-2 bg-light border rounded shadow-sm mb-3">
+                                        <img src="../image/D_B_airlines/Aereolineas_Don_Bosco_Dock.jpg"
+                                            class="img-fluid rounded" alt="Captura Docker Desktop">
+                                        <p class="small text-muted text-center mt-2 mb-0">Orquestación de contenedores
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <h4><b><u>Despliegue en Docker: Portabilidad</u></b></h4>
+                                    <p>
+                                        Mediante el uso de <b>Docker Compose</b>, logré orquestar un ecosistema de 5
+                                        contenedores trabajando en armonía: la aplicación Java, la base de datos MySQL
+                                        8.0, phpMyAdmin para la gestión, y el stack de monitorización.
+                                    </p>
+                                    <p>
+                                        Esta contenedorización elimina el clásico problema del <i>"en mi máquina
+                                            funciona"</i>, permitiendo que el sistema se despliegue en segundos en
+                                        cualquier infraestructura cloud con total fiabilidad y aislamiento de recursos.
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="mt-5 mb-4"><b>🐳 Orquestación de Infraestructura: El Stack <i>donboscoapp</i></b>
+                            </h4>
+                            <p>La arquitectura se despliega mediante <b>Docker Compose</b>, lo que permite levantar un
+                                ecosistema completo de 5 contenedores interconectados en una red virtual aislada,
+                                garantizando que el entorno de desarrollo sea idéntico al de producción.</p>
+
+                            <div class="row g-4">
+                                <!-- 1. aerolinea-app -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-start border-primary border-4 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-cpu-fill text-primary"></i> 1.
+                                                aerolinea-app</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted small">Imagen:
+                                                <code>donboscoapp-app</code> (Spring Boot)
+                                            </h6>
+                                            <p class="card-text"><b>Puerto:</b> <code>8080:8080</code></p>
+                                            <p class="card-text small">Es el <b>Backend Service</b>. Gestiona la lógica
+                                                de negocio, las transacciones de vuelos y la API REST. Configurado con
+                                                <b>Micrometer</b> para la exportación de métricas nativas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2. db-aerolinea -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-start border-success border-4 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-database-fill text-success"></i> 2.
+                                                db-aerolinea</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted small">Imagen:
+                                                <code>mysql:8.0</code>
+                                            </h6>
+                                            <p class="card-text"><b>Puertos:</b> <code>3307:3306</code></p>
+                                            <p class="card-text small">Capa de persistencia <b>MySQL</b>. Almacena
+                                                usuarios, rutas y reservas. Utiliza <b>volúmenes de Docker</b> para
+                                                garantizar la persistencia de datos ante reinicios.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. phpmyadmin -->
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-top border-info border-3 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-window-sidebar text-info"></i> 3.
+                                                phpmyadmin</h5>
+                                            <p class="card-text small"><b>Puerto:</b> <code>8081:80</code></p>
+                                            <p class="card-text small">Interfaz web para la administración ágil de la
+                                                base de datos y auditoría de datos en tiempo real.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4. prometheus -->
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-top border-warning border-3 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-activity text-warning"></i> 4.
+                                                prometheus</h5>
+                                            <p class="card-text small"><b>Puerto:</b> <code>9090:9090</code></p>
+                                            <p class="card-text small">Motor <b>TSDB</b> que realiza el <i>scraping</i>
+                                                de métricas de la App. Analiza consumo de recursos y salud del sistema.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 5. grafana -->
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-top border-danger border-3 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-pie-chart-fill text-danger"></i> 5.
+                                                grafana</h5>
+                                            <p class="card-text small"><b>Puerto:</b> <code>3000:3000</code></p>
+                                            <p class="card-text small">Centro de mando y <b>Observabilidad</b>.
+                                                Transforma las métricas de Prometheus en dashboards visuales dinámicos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ======= DevOps Section ======= -->
+                            <!-- ======= Sección de Observabilidad Detallada ======= -->
+                            <h4 class="mt-5 mb-4"><b>🔍 Observabilidad Profunda: El Binomio Prometheus & Grafana</b>
+                            </h4>
+                            <p>
+                                En arquitecturas modernas, la pregunta no es si el servidor está encendido, sino <b>cómo
+                                    está rindiendo</b>. Para DonBosco Airlines, implementé un stack de observabilidad
+                                basado en el modelo <i>Pull</i>, permitiendo una monitorización proactiva y detallada de
+                                cada componente.
+                            </p>
+
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <div class="p-4 bg-dark text-white rounded shadow-lg">
+                                        <h5 class="text-warning"><i class="bi bi-gear-wide-connected"></i> La
+                                            Arquitectura de Datos</h5>
+                                        <p class="small">
+                                            Para que lo que vemos en el dashboard sea posible, el flujo de información
+                                            sigue tres pasos críticos:
+                                        </p>
+                                        <ul class="small">
+                                            <li><b>1. Exposición (Spring Boot Actuator):</b> La aplicación Java no es
+                                                una "caja negra". Gracias a <b>Spring Boot Actuator</b> y la biblioteca
+                                                <b>Micrometer</b>, el sistema expone un endpoint en formato legible para
+                                                Prometheus, traduciendo métricas de la JVM (Java Virtual Machine) a
+                                                series temporales.
+                                            </li>
+                                            <li><b>2. Recolección (Prometheus):</b> Configurado en el puerto
+                                                <code>9090</code>, Prometheus actúa como un recolector activo. Cada
+                                                pocos segundos, realiza un "scraping" del contenedor de la app,
+                                                almacenando el histórico de CPU, memoria y latencia en su propia base de
+                                                datos (TSDB).
+                                            </li>
+                                            <li><b>3. Visualización (Grafana):</b> Situado en el puerto
+                                                <code>3000</code>, Grafana se conecta a Prometheus como su <b>Data
+                                                    Source</b> principal. Como se observa en la captura de
+                                                configuración, la conexión se realiza de forma interna mediante la red
+                                                de Docker (<code>http://prometheus:9090</code>), garantizando seguridad
+                                                y aislamiento.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ======= Sección de Observabilidad Actuator ======= -->
+                            <h4 class="mt-5 mb-4"><b>1. Exposición (Spring Boot Actuator):</b></h4>
+
+                            <p>
+                                Como se aprecia en la captura del despliegue, el panel de control permite
+                                monitorizar en tiempo real:
+                            </p>
+
+
+                </div>
+                <div class="col-lg-6">
+                    <img src="../image/D_B_airlines/actuator.jpg" class="img-fluid rounded shadow"
+                        alt="Detalle Actuator">
+                </div>
+
+                <div class="row mt-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img src="../image/D_B_airlines/actuator.jpg" class="img-fluid rounded shadow"
+                            alt="Detalle Actuator">
+                    </div>
+                    <div class="col-lg-6">
+                        <h5><b>El Dashboard: Decisiones basadas en Datos</b></h5>
+                        <p>
+                            Como se aprecia en la captura del despliegue, el panel de control permite
+                            monitorizar en tiempo real:
+                        </p>
+                        <div class="list-group list-group-flush small">
+                            <div class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-success"></i>
+                                <b>Uptime del Sistema:</b>
+                                Control total sobre la disponibilidad del servicio.
+                            </div>
+                            <div class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-success"></i>
+                                <b>Consumo de
+                                    Recursos:</b> Visualización del % de CPU (8.2%) y RAM (10.4%), vital
+                                para detectar fugas de memoria o cuellos de botella.
+                            </div>
+                            <div class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-success"></i>
+                                <b>Uso de Plantillas:</b>
+                                Si bien Grafana permite una personalización total, utilicé plantillas de la
+                                comunidad optimizadas para la JVM, ajustándolas a las necesidades
+                                específicas de la arquitectura de DonBoscoApp.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reinsertar aquí la Cita de Lord Kelvin que ya teníamos -->
+
+                <!-- CITA DE LORD KELVIN MEJORADA -->
+                <div
+                    class="p-4 p-md-5 my-4 rounded text-body-emphasis bg-body-secondary border-start border-primary border-5 shadow-sm">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p class="mb-3 fst-italic">"Lo que no se define, no se puede medir. Lo que
+                                no se mide, no se puede mejorar. Lo que no se mejora, se degrada
+                                siempre."</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0">
+                            William Thomson Kelvin <cite title="Source Title">en los fundamentos de la
+                                Mejora Continua</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <br>
+                <h4><b><u>Conclusión y Futuro</u></b></h4>
+                <p>
+                    DonBosco Airlines no es solo una app de gestión de vuelos; es un campo de pruebas
+                    para tecnologías críticas de infraestructura. El uso de contenedores y la
+                    monitorización proactiva sitúan este proyecto en un estándar profesional, preparando
+                    el camino hacia arquitecturas de microservicios aún más complejas y escalables.
+                </p>
+
+                <nav class="blog-pagination mt-5" aria-label="Pagination">
+                    <a class="btn btn-outline-secondary rounded-pill" href="../templates/virus_protec.html">Prev</a>
+                    <a class="btn btn-outline-secondary rounded-pill" href="../templates/cosmetix_ai.html">Next</a>
+                </nav>
+                <hr>
+        </section>
+        </section>
+        </article>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">Sobre este proyecto</h4>
+                    <p class="mb-2"><b>Tecnologías:</b> Java, Docker, MySQL, Prometheus, Grafana.</p>
+                    <p class="mb-0"><b>Conceptos:</b> DevOps, Observabilidad, Contenedorización.</p>
+                    <hr>
+                    <h4 class="fst-italic">Otros artículos</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                href="../templates/t2t.html">
+                                <img src="../image/App_T2T_mini.png" alt="T2T" width="96" height="96" class="rounded">
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Amazon Polly: Voz Digital</h6>
+                                    <small class="text-body-secondary">17 Abril, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                href="../templates/cosmetix_ai.html">
+                                <img src="../image/cosmetix_mini.png" alt="CosmetixAI" width="96" height="96"
+                                    class="rounded">
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">CosmetixAI: Supply Chain & IA</h6>
+                                    <small class="text-body-secondary">Nuevo Proyecto</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container text-center">
+            <div class="copyright">
+                &copy; Copyright: <strong><span>jmat Portfolio</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/paginas.js"></script>
+</body>
+
+</html>
